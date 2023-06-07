@@ -3,6 +3,7 @@ from tkinter import *
 from tkinter import ttk
 from PIL import Image, ImageTk
 
+
 def press_button1():
     #overwrite Button    
     global button_1
@@ -10,16 +11,16 @@ def press_button1():
     #Create new Window for question
     question= Toplevel()
     question.geometry("1920x1080")
-    img = Image.open("angeln.png")
+    img = Image.open("aal.png")
     img = ImageTk.PhotoImage(img)
     picture = Label(question, image= img)
-    picture.place(relx=0, rely=0)
-    answer_button_a = Button(question, text= "A) Keine", width=40, font=("Arial",20,"bold"),bg="grey", command= {print("Antwort A")})
-    #answer_button_a.place(relx=0.3, rely= 0.65)
-    answer_button_b = Button(question, text= "A) 60 bis 80 ", width=40, font=("Arial",20,"bold"),bg="grey", command= None)
-    answer_button_b.place(relx=0.3, rely= 0.75)
-    answer_button_c = Button(question, text= "A) 100 bis 119", width=40, font=("Arial",20,"bold"),bg="grey", command= None)
-    answer_button_c.place(relx=0.3, rely= 0.85)
+    picture.grid(column=0, row=0)
+    answer_button_a = Button(question, text= "A) Keine", width=40, font=("Arial",20,"bold"),bg="grey", pady=20, command= None)
+    answer_button_a.grid(column=0, row= 1, pady= 30)
+    answer_button_b = Button(question, text= "B) 60 bis 80 ", width=40, font=("Arial",20,"bold"),bg="grey", pady=20, command= None)
+    answer_button_b.grid(column=0, row= 2)
+    answer_button_c = Button(question, text= "C) 100 bis 119", width=40, font=("Arial",20,"bold"),bg="grey", pady=20, command= None)
+    answer_button_c.grid(column=0, row= 3,pady= 30)
     question.mainloop()
 
 if __name__ == '__main__':
