@@ -3,10 +3,17 @@ from tkinter import *
 from tkinter import ttk
 from PIL import Image, ImageTk
 
+answer_button_a = Button
+
+def answer_a_pressed():
+    global answer_button_a
+    answer_button_a.configure(bg="yellow")
+    print("Antwort A wurde gedrückt")
 
 def press_button1():
     #overwrite Button    
     global button_1
+    global answer_button_a
     button_1 = Button(win, text= "Thema 1", default="disabled", height=5, width=20, font=("Arial",20,"bold"),bg="grey", command= None).grid(column=0, row=0)
     #Create new Window for question
     question= Toplevel()
@@ -15,7 +22,7 @@ def press_button1():
     img = ImageTk.PhotoImage(img)
     picture = Label(question, image= img)
     picture.grid(column=0, row=0)
-    answer_button_a = Button(question, text= "A) Keine", width=40, font=("Arial",20,"bold"),bg="grey", pady=20, command= None)
+    answer_button_a = Button(question, text= "A) Keine", width=40, font=("Arial",20,"bold"),bg="grey", pady=20, command= answer_a_pressed)
     answer_button_a.grid(column=0, row= 1, pady= 30)
     answer_button_b = Button(question, text= "B) 60 bis 80 ", width=40, font=("Arial",20,"bold"),bg="grey", pady=20, command= None)
     answer_button_b.grid(column=0, row= 2)
@@ -30,7 +37,6 @@ if __name__ == '__main__':
     #Set the geometry of Tkinter frame
     win.geometry("1920x1080")
     win.configure(bg=("dark grey"))
-
 
     button_1 = Button(win, text= "Thema 1", height=5, width=20, font=("Arial",20,"bold"),bg="light blue", command= press_button1).grid(column=0, row=0)
     button_2 = Button(win, text= "Thema 2", height=5, width=20, font=("Arial",20,"bold"),bg="light blue", command= None).grid(column=1, row=0)
