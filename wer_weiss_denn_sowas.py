@@ -3,9 +3,11 @@ from tkinter import *
 from PIL import Image, ImageTk
 import json
 
+#TO DO: Themen Buttons grau werden lassen und Farbe ändern; Button Grafiken, auflösungsfilme????
+
 init = "{}"
-frage1 = '{ "pic":"aal.png", "answer1":"Keine", "answer2":"80-90", "answer3":"100-119", "correct":3}'
-frage2 = '{ "pic":"aal.png", "answer1":"neue Antwort1", "answer2":"Baum", "answer3":"elefant", "correct":2}'
+frage1 = '{ "pic":"Bilder/aal.png", "answer1":"Keine", "answer2":"80-90", "answer3":"100-119", "correct":3}'
+frage2 = '{ "pic":"Bilder/aal.png", "answer1":"neue Antwort1", "answer2":"Baum", "answer3":"elefant", "correct":2}'
 frage3 = (
     '{ "pic":"aal.png", "answer1":"12", "answer2":"18", "answer3":"45", "correct":1}'
 )
@@ -27,8 +29,9 @@ class Quiz:
         # Set the geometry of Tkinter frame
         self.main_screen.geometry("1920x1080")
         self.main_screen.configure(bg=("dark grey"))
+        self.buttons = [None] * 12
 
-        self.button_1 = Button(
+        self.buttons[0] = Button(
             self.main_screen,
             text="Thema 1",
             height=5,
@@ -37,7 +40,7 @@ class Quiz:
             bg="light blue",
             command=lambda: self.load_question(frage1),
         ).grid(column=0, row=0)
-        self.button_2 = Button(
+        self.buttons[1] = Button(
             self.main_screen,
             text="Thema 2",
             height=5,
@@ -46,7 +49,7 @@ class Quiz:
             bg="light blue",
             command=lambda: self.load_question(frage2),
         ).grid(column=1, row=0)
-        self.button_3 = Button(
+        self.buttons[2] = Button(
             self.main_screen,
             text="Thema 3",
             height=5,
@@ -55,7 +58,7 @@ class Quiz:
             bg="light blue",
             command=lambda: self.load_question(frage3),
         ).grid(column=2, row=0)
-        self.button_4 = Button(
+        self.buttons[3] = Button(
             self.main_screen,
             text="Thema 4",
             height=5,
@@ -64,7 +67,7 @@ class Quiz:
             bg="light blue",
             command=lambda: self.load_question(frage4),
         ).grid(column=3, row=0)
-        self.button_5 = Button(
+        self.buttons[4] = Button(
             self.main_screen,
             text="Thema 5",
             height=5,
@@ -73,7 +76,7 @@ class Quiz:
             bg="light blue",
             command=lambda: self.load_question(frage5),
         ).grid(column=0, row=1)
-        self.button_6 = Button(
+        self.buttons[5] = Button(
             self.main_screen,
             text="Thema 6",
             height=5,
@@ -82,7 +85,7 @@ class Quiz:
             bg="light blue",
             command=lambda: self.load_question(frage6),
         ).grid(column=1, row=1)
-        self.button_7 = Button(
+        self.buttons[6] = Button(
             self.main_screen,
             text="Thema 7",
             height=5,
@@ -91,7 +94,7 @@ class Quiz:
             bg="light blue",
             command=lambda: self.load_question(frage7),
         ).grid(column=2, row=1)
-        self.button_8 = Button(
+        self.buttons[7] = Button(
             self.main_screen,
             text="Thema 8",
             height=5,
@@ -100,7 +103,7 @@ class Quiz:
             bg="light blue",
             command=lambda: self.load_question(frage8),
         ).grid(column=3, row=1)
-        self.button_9 = Button(
+        self.buttons[8] = Button(
             self.main_screen,
             text="Thema 9",
             height=5,
@@ -109,7 +112,7 @@ class Quiz:
             bg="light blue",
             command=lambda: self.load_question(frage9),
         ).grid(column=0, row=2)
-        self.button_10 = Button(
+        self.buttons[9] = Button(
             self.main_screen,
             text="Thema 10",
             height=5,
@@ -118,7 +121,7 @@ class Quiz:
             bg="light blue",
             command=lambda: self.load_question(frage10),
         ).grid(column=1, row=2)
-        self.button_11 = Button(
+        self.buttons[10] = Button(
             self.main_screen,
             text="Thema 11",
             height=5,
@@ -127,7 +130,7 @@ class Quiz:
             bg="light blue",
             command=lambda: self.load_question(frage11),
         ).grid(column=2, row=2)
-        self.button_12 = Button(
+        self.buttons[11] = Button(
             self.main_screen,
             text="Thema 12",
             height=5,
@@ -141,8 +144,8 @@ class Quiz:
         self.answer_button_b = Button()
         self.answer_button_c = Button()
         self.active_button = 0
+        self.answered = False
         self.data = json.loads(init)
-        self.buttons = []
         self.window = Toplevel
 
         self.main_screen.mainloop()
@@ -178,7 +181,8 @@ class Quiz:
                 command=self.pressed_button_c,
             ).grid(column=0, row=3)
 
-        else:
+        elif not self.answered:
+            self.answered = True
             if self.data["correct"] == 1:
                 self.answer_button_a = Button(
                     self.window,
@@ -269,7 +273,8 @@ class Quiz:
                 command=self.pressed_button_c,
             ).grid(column=0, row=3)
 
-        else:
+        elif not self.answered:
+            self.answered = True
             if self.data["correct"] == 2:
                 self.answer_button_b = Button(
                     self.window,
@@ -359,7 +364,8 @@ class Quiz:
                 pady=20,
                 command=self.pressed_button_c,
             ).grid(column=0, row=3)
-        else:
+        elif not self.answered:
+            self.answered = True
             if self.data["correct"] == 3:
                 self.answer_button_c = Button(
                     self.window,
@@ -420,6 +426,7 @@ class Quiz:
                     ).grid(column=0, row=2)
 
     def load_question(self, question_number):
+        self.answered = False
         self.data = json.loads(question_number)
         self.window = Toplevel(width=1920, height=1080)
         img = Image.open(self.data["pic"])
