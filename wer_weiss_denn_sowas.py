@@ -5,7 +5,7 @@ import json
 
 #TO DO: Themen Buttons grau werden lassen und Farbe ändern; Button Grafiken, auflösungsfilme????
 
-themen = '{"thema1":"Thema1", "thema2":"Thema2", "thema3":"Thema3", "thema4":"Thema4", "thema5":"Thema5", "thema6":"Thema6", "thema7":"Thema7", "thema8":"Thema8", "thema9":"Thema9", "thema10":"Thema10", "thema11":"Thema11", "thema12":"Thema12"  }'
+themen = '{"thema1":"Clever", "thema2":"Total Genial", "thema3":"Gesundheit", "thema4":"tierisch, tierisch", "thema5":"Trick 17", "thema6":"Auto", "thema7":"?", "thema8":"Im Grünen", "thema9":"Vereine", "thema10":"Heimat", "thema11":"Sport", "thema12":"Brisant!"  }'
 frage1 = '{ "pic":"Bilder/aal.png", "answer1":"Keine", "answer2":"80-90", "answer3":"100-119", "correct":3, "index":0}'
 frage2 = '{ "pic":"Bilder/aal.png", "answer1":"neue Antwort1", "answer2":"Baum", "answer3":"elefant", "correct":2, "index":1}'
 frage3 = '{ "pic":"Bilder/aal.png", "answer1":"12", "answer2":"18", "answer3":"45", "correct":1, "index":2}'
@@ -24,120 +24,151 @@ class Quiz:
     def __init__(self):
         self.main_screen = Tk()
         self.main_screen.title("Wer weiß denn sowas???")
+        self.main_screen.protocol("WM_DELETE_WINDOW", DISABLED)
+
         # Set the geometry of Tkinter frame
         self.main_screen.geometry("1920x1080")
+        self.main_screen.state("zoomed")
         self.main_screen.configure(bg=("dark grey"))
         self.buttons = [Button] * 12
         self.active_button = 0
         self.answered = False
         self.data = json.loads(themen)
 
+        self.rahmen = ImageTk.PhotoImage(Image.open("Bilder/rahmen.png"))
+        self.korrekt = ImageTk.PhotoImage(Image.open("Bilder/korrekt.png"))
+        self.falsch = ImageTk.PhotoImage(Image.open("Bilder/falsch.png"))    
+        self.grau = ImageTk.PhotoImage(Image.open("Bilder/grau.png"))
         self.button1 = Button(
             self.main_screen,
             text=self.data["thema1"],
-            height=5,
-            width=20,
             font=("Arial", 20, "bold"),
-            bg="light blue",
+            fg="white",
+            width= 480,
+            height= 360,
+            image=self.rahmen,
+            compound=CENTER,
             command=lambda: self.load_question(frage1),
         ).grid(column=0, row=0)
         self.button2 = Button(
             self.main_screen,
             text=self.data["thema2"],
-            height=5,
-            width=20,
             font=("Arial", 20, "bold"),
-            bg="light blue",
+            fg="white",
+            width= 480,
+            height= 360,
+            image=self.rahmen,
+            compound=CENTER,
             command=lambda: self.load_question(frage2),
         ).grid(column=1, row=0)
         self.button3 = Button(
             self.main_screen,
             text=self.data["thema3"],
-            height=5,
-            width=20,
             font=("Arial", 20, "bold"),
-            bg="light blue",
+            fg="white",
+            width= 480,
+            height= 360,
+            image=self.rahmen,
+            compound=CENTER,
             command=lambda: self.load_question(frage3),
         ).grid(column=2, row=0)
         self.button4 = Button(
             self.main_screen,
             text=self.data["thema4"],
-            height=5,
-            width=20,
             font=("Arial", 20, "bold"),
-            bg="light blue",
+            fg="white",
+            width= 480,
+            height= 360,
+            image=self.rahmen,
+            compound=CENTER,
             command=lambda: self.load_question(frage4),
         ).grid(column=3, row=0)
         self.button5 = Button(
             self.main_screen,
             text=self.data["thema5"],
-            height=5,
-            width=20,
             font=("Arial", 20, "bold"),
-            bg="light blue",
+            fg="white",
+            width= 480,
+            height= 360,
+            image=self.rahmen,
+            compound=CENTER,
             command=lambda: self.load_question(frage5),
         ).grid(column=0, row=1)
         self.button6 = Button(
             self.main_screen,
             text=self.data["thema6"],
-            height=5,
-            width=20,
             font=("Arial", 20, "bold"),
-            bg="light blue",
+            fg="white",
+            width= 480,
+            height= 360,
+            image=self.rahmen,
+            compound=CENTER,
             command=lambda: self.load_question(frage6),
         ).grid(column=1, row=1)
         self.button7 = Button(
             self.main_screen,
             text=self.data["thema7"],
-            height=5,
-            width=20,
             font=("Arial", 20, "bold"),
-            bg="light blue",
+            fg="white",
+            width= 480,
+            height= 360,
+            image=self.rahmen,
+            compound=CENTER,
             command=lambda: self.load_question(frage7),
         ).grid(column=2, row=1)
         self.button8 = Button(
             self.main_screen,
             text=self.data["thema8"],
-            height=5,
-            width=20,
             font=("Arial", 20, "bold"),
-            bg="light blue",
+            fg="white",
+            width= 480,
+            height= 360,
+            image=self.rahmen,
+            compound=CENTER,
             command=lambda: self.load_question(frage8),
         ).grid(column=3, row=1)
         self.button9 = Button(
             self.main_screen,
             text=self.data["thema9"],
-            height=5,
-            width=20,
             font=("Arial", 20, "bold"),
-            bg="light blue",
+            fg="white",
+            width= 480,
+            height= 360,
+            image=self.rahmen,
+            compound=CENTER,
             command=lambda: self.load_question(frage9),
         ).grid(column=0, row=2)
         self.button10 = Button(
             self.main_screen,
             text=self.data["thema10"],
-            height=5,
-            width=20,
             font=("Arial", 20, "bold"),
-            bg="light blue",
+            fg="white",
+            width= 480,
+            height= 360,
+            image=self.rahmen,
+            compound=CENTER,
             command=lambda: self.load_question(frage10),
         ).grid(column=1, row=2)
         self.button11 = Button(
             self.main_screen,
             text=self.data["thema11"],
-            height=5,
-            width=20,
             font=("Arial", 20, "bold"),
-            bg="light blue",
+            fg="white",
+            width= 480,
+            height= 360,
+            image=self.rahmen,
+            compound=CENTER,
             command=lambda: self.load_question(frage11),
         ).grid(column=2, row=2)
         self.buttons12 = Button(
             self.main_screen,
             text=self.data["thema12"],
-            height=5,
-            width=20,
             font=("Arial", 20, "bold"),
-            bg="light blue",
+            fg="white",
+            width= 480,
+            height= 360,
+            image=self.rahmen,
+            compound=CENTER,
             command=lambda: self.load_question(frage12),
         ).grid(column=3, row=2)
 
@@ -154,10 +185,10 @@ class Quiz:
             self.button1 = Button(
             self.main_screen,
             text=temp["thema1"],
-            height=5,
-            width=20,
             font=("Arial", 20, "bold"),
-            bg=color,
+            fg="white",
+            image=color,
+            compound=CENTER,
             command=None,
         ).grid(column=0, row=0)
         
@@ -165,10 +196,10 @@ class Quiz:
             self.button2 = Button(
             self.main_screen,
             text=temp["thema2"],
-            height=5,
-            width=20,
             font=("Arial", 20, "bold"),
-            bg=color,
+            fg="white",
+            image=color,
+            compound=CENTER,
             command=None,
         ).grid(column=1, row=0)
 
@@ -176,10 +207,10 @@ class Quiz:
             self.button3 = Button(
             self.main_screen,
             text=temp["thema3"],
-            height=5,
-            width=20,
             font=("Arial", 20, "bold"),
-            bg=color,
+            fg="white",
+            image=color,
+            compound=CENTER,
             command=None,
         ).grid(column=2, row=0)
             
@@ -187,10 +218,10 @@ class Quiz:
             self.button4 = Button(
             self.main_screen,
             text=temp["thema4"],
-            height=5,
-            width=20,
             font=("Arial", 20, "bold"),
-            bg=color,
+            fg="white",
+            image=color,
+            compound=CENTER,
             command=None,
         ).grid(column=3, row=0)
             
@@ -198,10 +229,10 @@ class Quiz:
             self.button5 = Button(
             self.main_screen,
             text=temp["thema5"],
-            height=5,
-            width=20,
             font=("Arial", 20, "bold"),
-            bg=color,
+            fg="white",
+            image=color,
+            compound=CENTER,
             command=None,
         ).grid(column=0, row=1)
         
@@ -209,10 +240,10 @@ class Quiz:
             self.button6 = Button(
             self.main_screen,
             text=temp["thema5"],
-            height=5,
-            width=20,
             font=("Arial", 20, "bold"),
-            bg=color,
+            fg="white",
+            image=color,
+            compound=CENTER,
             command=None,
         ).grid(column=1, row=1)
 
@@ -220,10 +251,10 @@ class Quiz:
             self.button7 = Button(
             self.main_screen,
             text=temp["thema7"],
-            height=5,
-            width=20,
             font=("Arial", 20, "bold"),
-            bg=color,
+            fg="white",
+            image=color,
+            compound=CENTER,
             command=None,
         ).grid(column=2, row=1)
             
@@ -231,10 +262,10 @@ class Quiz:
             self.button8 = Button(
             self.main_screen,
             text=temp["thema8"],
-            height=5,
-            width=20,
             font=("Arial", 20, "bold"),
-            bg=color,
+            fg="white",
+            image=color,
+            compound=CENTER,
             command=None,
         ).grid(column=3, row=1)
             
@@ -242,10 +273,10 @@ class Quiz:
             self.button9 = Button(
             self.main_screen,
             text=temp["thema9"],
-            height=5,
-            width=20,
             font=("Arial", 20, "bold"),
-            bg=color,
+            fg="white",
+            image=color,
+            compound=CENTER,
             command=None,
         ).grid(column=0, row=2)
         
@@ -253,10 +284,10 @@ class Quiz:
             self.button10 = Button(
             self.main_screen,
             text=temp["thema10"],
-            height=5,
-            width=20,
             font=("Arial", 20, "bold"),
-            bg=color,
+            fg="white",
+            image=color,
+            compound=CENTER,
             command=None,
         ).grid(column=1, row=2)
 
@@ -264,10 +295,10 @@ class Quiz:
             self.button7 = Button(
             self.main_screen,
             text=temp["thema11"],
-            height=5,
-            width=20,
             font=("Arial", 20, "bold"),
-            bg=color,
+            fg="white",
+            image=color,
+            compound=CENTER,
             command=None,
         ).grid(column=2, row=2)
             
@@ -275,10 +306,10 @@ class Quiz:
             self.button8 = Button(
             self.main_screen,
             text=temp["thema12"],
-            height=5,
-            width=20,
             font=("Arial", 20, "bold"),
-            bg=color,
+            fg="white",
+            image=color,
+            compound=CENTER,
             command=None,
         ).grid(column=3, row=2)
 
@@ -325,9 +356,9 @@ class Quiz:
                     pady=20,
                     command=None,
                 ).grid(column=0, row=1)
-                self.set_main_button("green")
+                self.set_main_button(self.korrekt)
             else:
-                self.set_main_button("red")
+                self.set_main_button(self.falsch)
                 self.answer_button_a = Button(
                     self.window,
                     text=self.data["answer1"],
@@ -419,9 +450,9 @@ class Quiz:
                     pady=20,
                     command=None,
                 ).grid(column=0, row=2)
-                self.set_main_button("green")
+                self.set_main_button(self.korrekt)
             else:
-                self.set_main_button("red")
+                self.set_main_button(self.falsch)
                 self.answer_button_b = Button(
                     self.window,
                     text=self.data["answer2"],
@@ -512,9 +543,9 @@ class Quiz:
                     pady=20,
                     command=None,
                 ).grid(column=0, row=3)
-                self.set_main_button("green")
+                self.set_main_button(self.korrekt)
             else:
-                self.set_main_button("red")
+                self.set_main_button(self.falsch)
                 self.answer_button_c = Button(
                     self.window,
                     text=self.data["answer3"],
@@ -566,8 +597,9 @@ class Quiz:
     def load_question(self, question_number):
         self.answered = False
         self.data = json.loads(question_number)
-        self.set_main_button("grey")
+        self.set_main_button(self.grau)
         self.window = Toplevel(width=1920, height=1080)
+        self.window.state("zoomed")
         img = Image.open(self.data["pic"])
         img = ImageTk.PhotoImage(img)
         Label(self.window, image=img).grid(column=0, row=0)
