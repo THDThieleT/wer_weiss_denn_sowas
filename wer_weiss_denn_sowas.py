@@ -53,7 +53,8 @@ class Quiz:
             image=self.rahmen,
             compound=CENTER,
             command=lambda: self.load_question(frage1),
-        ).grid(column=0, row=0)
+        )
+        self.button1.grid(column=0, row=0)
         self.button2 = Button(
             self.main_screen,
             text=self.data["thema2"],
@@ -64,7 +65,8 @@ class Quiz:
             image=self.rahmen,
             compound=CENTER,
             command=lambda: self.load_question(frage2),
-        ).grid(column=1, row=0)
+        )
+        self.button2.grid(column=1, row=0)
         self.button3 = Button(
             self.main_screen,
             text=self.data["thema3"],
@@ -75,7 +77,8 @@ class Quiz:
             image=self.rahmen,
             compound=CENTER,
             command=lambda: self.load_question(frage3),
-        ).grid(column=2, row=0)
+        )
+        self.button3.grid(column=2, row=0)
         self.button4 = Button(
             self.main_screen,
             text=self.data["thema4"],
@@ -86,7 +89,8 @@ class Quiz:
             image=self.rahmen,
             compound=CENTER,
             command=lambda: self.load_question(frage4),
-        ).grid(column=3, row=0)
+        )
+        self.button4.grid(column=3, row=0)
         self.button5 = Button(
             self.main_screen,
             text=self.data["thema5"],
@@ -97,7 +101,8 @@ class Quiz:
             image=self.rahmen,
             compound=CENTER,
             command=lambda: self.load_question(frage5),
-        ).grid(column=0, row=1)
+        )
+        self.button5.grid(column=0, row=1)
         self.button6 = Button(
             self.main_screen,
             text=self.data["thema6"],
@@ -108,7 +113,8 @@ class Quiz:
             image=self.rahmen,
             compound=CENTER,
             command=lambda: self.load_question(frage6),
-        ).grid(column=1, row=1)
+        )
+        self.button6.grid(column=1, row=1)
         self.button7 = Button(
             self.main_screen,
             text=self.data["thema7"],
@@ -119,7 +125,8 @@ class Quiz:
             image=self.rahmen,
             compound=CENTER,
             command=lambda: self.load_question(frage7),
-        ).grid(column=2, row=1)
+        )
+        self.button7.grid(column=2, row=1)
         self.button8 = Button(
             self.main_screen,
             text=self.data["thema8"],
@@ -130,7 +137,8 @@ class Quiz:
             image=self.rahmen,
             compound=CENTER,
             command=lambda: self.load_question(frage8),
-        ).grid(column=3, row=1)
+        )
+        self.button8.grid(column=3, row=1)
         self.button9 = Button(
             self.main_screen,
             text=self.data["thema9"],
@@ -141,7 +149,8 @@ class Quiz:
             image=self.rahmen,
             compound=CENTER,
             command=lambda: self.load_question(frage9),
-        ).grid(column=0, row=2)
+        )
+        self.button9.grid(column=0, row=2)
         self.button10 = Button(
             self.main_screen,
             text=self.data["thema10"],
@@ -152,7 +161,8 @@ class Quiz:
             image=self.rahmen,
             compound=CENTER,
             command=lambda: self.load_question(frage10),
-        ).grid(column=1, row=2)
+        )
+        self.button10.grid(column=1, row=2)
         self.button11 = Button(
             self.main_screen,
             text=self.data["thema11"],
@@ -163,7 +173,8 @@ class Quiz:
             image=self.rahmen,
             compound=CENTER,
             command=lambda: self.load_question(frage11),
-        ).grid(column=2, row=2)
+        )
+        self.button11.grid(column=2, row=2)
         self.button12 = Button(
             self.main_screen,
             text=self.data["thema12"],
@@ -174,7 +185,8 @@ class Quiz:
             image=self.rahmen,
             compound=CENTER,
             command=lambda: self.load_question(frage12),
-        ).grid(column=3, row=2)
+        )
+        self.button12.grid(column=3, row=2)
 
         self.answer_button_a = Button()
         self.answer_button_b = Button()
@@ -186,143 +198,131 @@ class Quiz:
         index = self.data["index"]
         temp = json.loads(themen)
         if(index == 0):
-            self.button1 = Button(
-            self.main_screen,
+            self.button1.configure(
             text=temp["thema1"],
             font=("Arial", 20, "bold"),
             fg="white", bg="white",
             image=color,
             compound=CENTER,
-            command=None,
-        ).grid(column=0, row=0)
+            command=None
+            )
+            
         
         elif(index == 1):
-            self.button2 = Button(
-            self.main_screen,
+            self.button2.configure(
             text=temp["thema2"],
             font=("Arial", 20, "bold"),
             fg="white", bg="white",
             image=color,
             compound=CENTER,
-            command=None,
-        ).grid(column=1, row=0)
+            command=None
+            )
 
         elif(index == 2):
-            self.button3 = Button(
-            self.main_screen,
+            self.button3.configure(
             text=temp["thema3"],
             font=("Arial", 20, "bold"),
             fg="white", bg="white",
             image=color,
             compound=CENTER,
-            command=None,
-        ).grid(column=2, row=0)
+            command=None
+            )
             
         elif(index == 3):
-            self.button4 = Button(
-            self.main_screen,
+            self.button4.configure(
             text=temp["thema4"],
             font=("Arial", 20, "bold"),
             fg="white", bg="white",
             image=color,
             compound=CENTER,
-            command=None,
-        ).grid(column=3, row=0)
+            command=None
+            )
             
         elif(index == 4):
-            self.button5 = Button(
-            self.main_screen,
+            self.button5.configure(
             text=temp["thema5"],
             font=("Arial", 20, "bold"),
             fg="white", bg="white",
             image=color,
             compound=CENTER,
-            command=None,
-        ).grid(column=0, row=1)
+            command=None
+            )
         
         elif(index == 5):
-            self.button6 = Button(
-            self.main_screen,
+            self.button6.configure(
             text=temp["thema5"],
             font=("Arial", 20, "bold"),
             fg="white", bg="white",
             image=color,
             compound=CENTER,
-            command=None,
-        ).grid(column=1, row=1)
+            command=None
+            )
 
         elif(index == 6):
-            self.button7 = Button(
-            self.main_screen,
+            self.button7.configure(
             text=temp["thema7"],
             font=("Arial", 20, "bold"),
             fg="white", bg="white",
             image=color,
             compound=CENTER,
-            command=None,
-        ).grid(column=2, row=1)
+            command=None
+            )
             
         elif(index == 7):
-            self.button8 = Button(
-            self.main_screen,
+            self.button8.configure(
             text=temp["thema8"],
             font=("Arial", 20, "bold"),
             fg="white", bg="white",
             image=color,
             compound=CENTER,
-            command=None,
-        ).grid(column=3, row=1)
+            command=None
+            )
             
         elif(index == 8):
-            self.button9 = Button(
-            self.main_screen,
+            self.button9.configure(
             text=temp["thema9"],
             font=("Arial", 20, "bold"),
             fg="white", bg="white",
             image=color,
             compound=CENTER,
-            command=None,
-        ).grid(column=0, row=2)
+            command=None
+            )
         
         elif(index == 9):
-            self.button10 = Button(
-            self.main_screen,
+            self.button10.configure(
             text=temp["thema10"],
             font=("Arial", 20, "bold"),
             fg="white", bg="white",
             image=color,
             compound=CENTER,
-            command=None,
-        ).grid(column=1, row=2)
+            command=None
+            )
 
         elif(index == 10):
-            self.button11 = Button(
-            self.main_screen,
+            self.button11.configure(
             text=temp["thema11"],
             font=("Arial", 20, "bold"),
             fg="white", bg="white",
             image=color,
             compound=CENTER,
-            command=None,
-        ).grid(column=2, row=2)
+            command=None
+            )
             
         elif(index == 11):
-            self.button12 = Button(
-            self.main_screen,
+            self.button12.configure(
             text=temp["thema12"],
             font=("Arial", 20, "bold"),
             fg="white", bg="white",
             image=color,
             compound=CENTER,
-            command=None,
-        ).grid(column=3, row=2)
+            command=None
+            )
 
     def pressed_button_a(self):
         if self.answered == False:
             if not (self.active_button == 1):
                 self.active_button = 1
-                self.answer_button_a = Button(
-                    self.window,
+                self.answer_button_a.configure(
                     text=self.data["answer1"],
                     height=84,
                     width=1588,
@@ -332,10 +332,9 @@ class Quiz:
                     pady=5,
                     borderwidth=0,
                     compound=CENTER,
-                    command=self.pressed_button_a,
-                    ).grid(column=0, row=1)
-                self.answer_button_b = Button(
-                    self.window,
+                    command=self.pressed_button_a
+                    )
+                self.answer_button_b.configure(
                     text=self.data["answer2"],
                     height=84,
                     width=1588,
@@ -345,10 +344,9 @@ class Quiz:
                     pady=5,
                     borderwidth=0,
                     compound=CENTER,
-                    command=self.pressed_button_b,
-                    ).grid(column=0, row=2)
-                self.answer_button_c = Button(
-                    self.window,
+                    command=self.pressed_button_b
+                    )
+                self.answer_button_c.configure(
                     text=self.data["answer3"],
                     height=84,
                     width=1588,
@@ -358,14 +356,13 @@ class Quiz:
                     pady=5,
                     borderwidth=0,
                     compound=CENTER,
-                    command=self.pressed_button_c,
-                    ).grid(column=0, row=3)
+                    command=self.pressed_button_c
+                    )
 
             elif not self.answered:
                 self.answered = True
                 if self.data["correct"] == 1:
-                    self.answer_button_a = Button(
-                        self.window,
+                    self.answer_button_a.configure(
                         text=self.data["answer1"],
                         height=84,
                         width=1588,
@@ -375,13 +372,12 @@ class Quiz:
                         pady=5,
                         borderwidth=0,
                         compound=CENTER,
-                        command=None,
-                        ).grid(column=0, row=1)
+                        command=None
+                        )
                     self.set_main_button(self.korrekt)
                 else:
                     self.set_main_button(self.falsch)
-                    self.answer_button_a = Button(
-                        self.window,
+                    self.answer_button_a.configure(
                         text=self.data["answer1"],
                         height=84,
                         width=1588,
@@ -391,11 +387,10 @@ class Quiz:
                         pady=5,
                         borderwidth=0,
                         compound=CENTER,
-                        command=None,
-                        ).grid(column=0, row=1)
+                        command=None
+                        )
                 if self.data["correct"] == 2:
-                    self.answer_button_b = Button(
-                        self.window,
+                    self.answer_button_b.configure(
                         text=self.data["answer2"],
                         height=84,
                         width=1588,
@@ -405,10 +400,9 @@ class Quiz:
                         pady=5,
                         borderwidth=0,
                         compound=CENTER,
-                        command=None,
-                        ).grid(column=0, row=2)
-                    self.answer_button_c = Button(
-                        self.window,
+                        command=None
+                        )
+                    self.answer_button_c.configure(
                         text=self.data["answer3"],
                         height=84,
                         width=1588,
@@ -418,11 +412,10 @@ class Quiz:
                         pady=5,
                         borderwidth=0,
                         compound=CENTER,
-                        command=None,
-                        ).grid(column=0, row=3)
+                        command=None
+                        )
                 elif self.data["correct"] == 3:
-                    self.answer_button_b = Button(
-                        self.window,
+                    self.answer_button_b.configure(
                         text=self.data["answer2"],
                         height=84,
                         width=1588,
@@ -432,10 +425,9 @@ class Quiz:
                         pady=5,
                         borderwidth=0,
                         compound=CENTER,
-                        command=None,
-                        ).grid(column=0, row=2)
-                    self.answer_button_c = Button(
-                        self.window,
+                        command=None
+                        )
+                    self.answer_button_c.configure(
                         text=self.data["answer3"],
                         height=84,
                         width=1588,
@@ -445,41 +437,15 @@ class Quiz:
                         pady=5,
                         borderwidth=0,
                         compound=CENTER,
-                        command=None,
-                        ).grid(column=0, row=3)
+                        command=None
+                        )
         
     def pressed_button_b(self):
-        if not (self.active_button == 2):
-            self.active_button = 2
-            self.answer_button_a = Button(
-            self.window,
-            text=self.data["answer1"],
-            height=84,
-            width=1588,
-            font=("Arial", 20, "bold"),
-            fg="white", bg="white",
-            image= self.antwort_rahmen,
-            pady=5,
-            borderwidth=0,
-            compound=CENTER,
-            command=self.pressed_button_a,
-            ).grid(column=0, row=1)
-            self.answer_button_b = Button(
-                self.window,
-                text=self.data["answer2"],
-                height=84,
-                width=1588,
-                font=("Arial", 20, "bold"),
-                fg="white", bg="white",
-                image= self.antwort_select,
-                pady=5,
-                borderwidth=0,
-                compound=CENTER,
-                command=self.pressed_button_b,
-            ).grid(column=0, row=2)
-            self.answer_button_c = Button(
-                self.window,
-                text=self.data["answer3"],
+        if self.answered == False:
+            if not (self.active_button == 2):
+                self.active_button = 2
+                self.answer_button_a.configure(
+                text=self.data["answer1"],
                 height=84,
                 width=1588,
                 font=("Arial", 20, "bold"),
@@ -488,115 +454,120 @@ class Quiz:
                 pady=5,
                 borderwidth=0,
                 compound=CENTER,
-                command=self.pressed_button_c,
-            ).grid(column=0, row=3)
+                command=self.pressed_button_a
+                )
+                self.answer_button_b.configure(
+                    text=self.data["answer2"],
+                    height=84,
+                    width=1588,
+                    font=("Arial", 20, "bold"),
+                    fg="white", bg="white",
+                    image= self.antwort_select,
+                    pady=5,
+                    borderwidth=0,
+                    compound=CENTER,
+                    command=self.pressed_button_b
+                    )
+                self.answer_button_c.configure(
+                    text=self.data["answer3"],
+                    height=84,
+                    width=1588,
+                    font=("Arial", 20, "bold"),
+                    fg="white", bg="white",
+                    image= self.antwort_rahmen,
+                    pady=5,
+                    borderwidth=0,
+                    compound=CENTER,
+                    command=self.pressed_button_c
+                    )
 
-        elif not self.answered:
-            self.answered = True
-            if self.data["correct"] == 2:
-                self.answer_button_b = Button(
-                    self.window,
-                    text=self.data["answer2"],
-                    height=84,
-                    width=1588,
-                    font=("Arial", 20, "bold"),
-                    fg="white", bg="white",
-                    image= self.antwort_korrekt,
-                    pady=5,
-                    borderwidth=0,
-                    compound=CENTER,
-                    command=None,
-                    ).grid(column=0, row=2)
-                self.set_main_button(self.korrekt)
-            else:
-                self.set_main_button(self.falsch)
-                self.answer_button_b = Button(
-                    self.window,
-                    text=self.data["answer2"],
-                    height=84,
-                    width=1588,
-                    font=("Arial", 20, "bold"),
-                    fg="white", bg="white",
-                    image= self.antwort_falsch,
-                    pady=5,
-                    borderwidth=0,
-                    compound=CENTER,
-                    command=None,
-                    ).grid(column=0, row=2)
-            if self.data["correct"] == 1:
-                self.answer_button_a = Button(
-                    self.window,
-                    text=self.data["answer1"],
-                    height=84,
-                    width=1588,
-                    font=("Arial", 20, "bold"),
-                    fg="white", bg="white",
-                    image= self.antwort_korrekt,
-                    pady=5,
-                    borderwidth=0,
-                    compound=CENTER,
-                    command=None,
-                    ).grid(column=0, row=1)
-                self.answer_button_c = Button(
-                    self.window,
-                    text=self.data["answer3"],
-                    height=84,
-                    width=1588,
-                    font=("Arial", 20, "bold"),
-                    fg="white", bg="white",
-                    image= self.antwort_rahmen,
-                    pady=5,
-                    borderwidth=0,
-                    compound=CENTER,
-                    command=None,
-                ).grid(column=0, row=3)
-            elif self.data["correct"] == 3:
-                self.answer_button_a = Button(
-                    self.window,
-                    text=self.data["answer1"],
-                    height=84,
-                    width=1588,
-                    font=("Arial", 20, "bold"),
-                    fg="white", bg="white",
-                    image= self.antwort_rahmen,
-                    pady=5,
-                    borderwidth=0,
-                    compound=CENTER,
-                    command=None,
-                    ).grid(column=0, row=1)
-                self.answer_button_c = Button(
-                    self.window,
-                    text=self.data["answer3"],
-                    height=84,
-                    width=1588,
-                    font=("Arial", 20, "bold"),
-                    fg="white", bg="white",
-                    image= self.antwort_korrekt,
-                    pady=5,
-                    borderwidth=0,
-                    compound=CENTER,
-                    command=None,
-                    ).grid(column=0, row=3)
+            elif not self.answered:
+                self.answered = True
+                if self.data["correct"] == 2:
+                    self.answer_button_b.configure(
+                        text=self.data["answer2"],
+                        height=84,
+                        width=1588,
+                        font=("Arial", 20, "bold"),
+                        fg="white", bg="white",
+                        image= self.antwort_korrekt,
+                        pady=5,
+                        borderwidth=0,
+                        compound=CENTER,
+                        command=None
+                        )
+                    self.set_main_button(self.korrekt)
+                else:
+                    self.set_main_button(self.falsch)
+                    self.answer_button_b.configure(
+                        text=self.data["answer2"],
+                        height=84,
+                        width=1588,
+                        font=("Arial", 20, "bold"),
+                        fg="white", bg="white",
+                        image= self.antwort_falsch,
+                        pady=5,
+                        borderwidth=0,
+                        compound=CENTER,
+                        command=None
+                        )
+                if self.data["correct"] == 1:
+                    self.answer_button_a.configure(
+                        text=self.data["answer1"],
+                        height=84,
+                        width=1588,
+                        font=("Arial", 20, "bold"),
+                        fg="white", bg="white",
+                        image= self.antwort_korrekt,
+                        pady=5,
+                        borderwidth=0,
+                        compound=CENTER,
+                        command=None
+                        )
+                    self.answer_button_c.configure(
+                        text=self.data["answer3"],
+                        height=84,
+                        width=1588,
+                        font=("Arial", 20, "bold"),
+                        fg="white", bg="white",
+                        image= self.antwort_rahmen,
+                        pady=5,
+                        borderwidth=0,
+                        compound=CENTER,
+                        command=None
+                        )
+                elif self.data["correct"] == 3:
+                    self.answer_button_a.configure(
+                        text=self.data["answer1"],
+                        height=84,
+                        width=1588,
+                        font=("Arial", 20, "bold"),
+                        fg="white", bg="white",
+                        image= self.antwort_rahmen,
+                        pady=5,
+                        borderwidth=0,
+                        compound=CENTER,
+                        command=None
+                        )
+                    self.answer_button_c.configure(
+                        text=self.data["answer3"],
+                        height=84,
+                        width=1588,
+                        font=("Arial", 20, "bold"),
+                        fg="white", bg="white",
+                        image= self.antwort_korrekt,
+                        pady=5,
+                        borderwidth=0,
+                        compound=CENTER,
+                        command=None
+                        )
 
     def pressed_button_c(self):
-        if not (self.active_button == 3):
-            self.active_button = 3
-            self.answer_button_a = Button(
-            self.window,
-            text=self.data["answer1"],
-            height=84,
-            width=1588,
-            font=("Arial", 20, "bold"),
-            fg="white", bg="white",
-            image= self.antwort_rahmen,
-            pady=5,
-            borderwidth=0,
-            compound=CENTER,
-            command=self.pressed_button_a,
-        ).grid(column=0, row=1)
-            self.answer_button_b = Button(
-                self.window,
-                text=self.data["answer2"],
+        if self.answered == False:
+            if not (self.active_button == 3):
+                self.active_button = 3
+                self.answer_button_a.configure(
+                text=self.data["answer1"],
                 height=84,
                 width=1588,
                 font=("Arial", 20, "bold"),
@@ -605,69 +576,9 @@ class Quiz:
                 pady=5,
                 borderwidth=0,
                 compound=CENTER,
-                command=self.pressed_button_b,
-            ).grid(column=0, row=2)
-            self.answer_button_c = Button(
-                self.window,
-                text=self.data["answer3"],
-                height=84,
-                width=1588,
-                font=("Arial", 20, "bold"),
-                fg="white", bg="white",
-                image= self.antwort_select,
-                pady=5,
-                borderwidth=0,
-                compound=CENTER,
-                command=self.pressed_button_c,
-            ).grid(column=0, row=3)
-        elif not self.answered:
-            self.answered = True
-            if self.data["correct"] == 3:
-                self.answer_button_c = Button(
-                    self.window,
-                    text=self.data["answer3"],
-                    height=84,
-                    width=1588,
-                    font=("Arial", 20, "bold"),
-                    fg="white", bg="white",
-                    image= self.antwort_korrekt,
-                    pady=5,
-                    borderwidth=0,
-                    compound=CENTER,
-                    command=None,
-                    ).grid(column=0, row=3)
-                self.set_main_button(self.korrekt)
-            else:
-                self.set_main_button(self.falsch)
-                self.answer_button_c = Button(
-                    self.window,
-                    text=self.data["answer3"],
-                    height=84,
-                    width=1588,
-                    font=("Arial", 20, "bold"),
-                    fg="white", bg="white",
-                    image= self.antwort_falsch,
-                    pady=5,
-                    borderwidth=0,
-                    compound=CENTER,
-                    command=None,
-                    ).grid(column=0, row=3)
-            if self.data["correct"] == 1:
-                self.answer_button_a = Button(
-                    self.window,
-                    text=self.data["answer1"],
-                    height=84,
-                    width=1588,
-                    font=("Arial", 20, "bold"),
-                    fg="white", bg="white",
-                    image= self.antwort_korrekt,
-                    pady=5,
-                    borderwidth=0,
-                    compound=CENTER,
-                    command=None,
-                    ).grid(column=0, row=1)
-                self.answer_button_b = Button(
-                    self.window,
+                command=self.pressed_button_a
+                )
+                self.answer_button_b.configure(
                     text=self.data["answer2"],
                     height=84,
                     width=1588,
@@ -677,47 +588,113 @@ class Quiz:
                     pady=5,
                     borderwidth=0,
                     compound=CENTER,
-                    command=None,
-                    ).grid(column=0, row=2)
-            elif self.data["correct"] == 2:
-                self.answer_button_a = Button(
-                    self.window,
-                    text=self.data["answer1"],
+                    command=self.pressed_button_b
+                    )
+                self.answer_button_c.configure(
+                    text=self.data["answer3"],
                     height=84,
                     width=1588,
                     font=("Arial", 20, "bold"),
                     fg="white", bg="white",
-                    image= self.antwort_rahmen,
+                    image= self.antwort_select,
                     pady=5,
                     borderwidth=0,
                     compound=CENTER,
-                    command=None,
-                    ).grid(column=0, row=1)
-                self.answer_button_b = Button(
-                    self.window,
-                    text=self.data["answer2"],
-                    height=84,
-                    width=1588,
-                    font=("Arial", 20, "bold"),
-                    fg="white", bg="white",
-                    image= self.antwort_korrekt,
-                    pady=5,
-                    borderwidth=0,
-                    compound=CENTER,
-                    command=None,
-                    ).grid(column=0, row=2)
+                    command=self.pressed_button_c
+                    )
+            elif not self.answered:
+                self.answered = True
+                if self.data["correct"] == 3:
+                    self.answer_button_c.configure(
+                        text=self.data["answer3"],
+                        height=84,
+                        width=1588,
+                        font=("Arial", 20, "bold"),
+                        fg="white", bg="white",
+                        image= self.antwort_korrekt,
+                        pady=5,
+                        borderwidth=0,
+                        compound=CENTER,
+                        command=None
+                        )
+                    self.set_main_button(self.korrekt)
+                else:
+                    self.set_main_button(self.falsch)
+                    self.answer_button_c.configure(
+                        text=self.data["answer3"],
+                        height=84,
+                        width=1588,
+                        font=("Arial", 20, "bold"),
+                        fg="white", bg="white",
+                        image= self.antwort_falsch,
+                        pady=5,
+                        borderwidth=0,
+                        compound=CENTER,
+                        command=None
+                        )
+                if self.data["correct"] == 1:
+                    self.answer_button_a.configure(
+                        text=self.data["answer1"],
+                        height=84,
+                        width=1588,
+                        font=("Arial", 20, "bold"),
+                        fg="white", bg="white",
+                        image= self.antwort_korrekt,
+                        pady=5,
+                        borderwidth=0,
+                        compound=CENTER,
+                        command=None
+                        )
+                    self.answer_button_b.configure(
+                        text=self.data["answer2"],
+                        height=84,
+                        width=1588,
+                        font=("Arial", 20, "bold"),
+                        fg="white", bg="white",
+                        image= self.antwort_rahmen,
+                        pady=5,
+                        borderwidth=0,
+                        compound=CENTER,
+                        command=None
+                        )
+                elif self.data["correct"] == 2:
+                    self.answer_button_a.configure(
+                        text=self.data["answer1"],
+                        height=84,
+                        width=1588,
+                        font=("Arial", 20, "bold"),
+                        fg="white", bg="white",
+                        image= self.antwort_rahmen,
+                        pady=5,
+                        borderwidth=0,
+                        compound=CENTER,
+                        command=None
+                        )
+                    self.answer_button_b.configure(
+                        text=self.data["answer2"],
+                        height=84,
+                        width=1588,
+                        font=("Arial", 20, "bold"),
+                        fg="white", bg="white",
+                        image= self.antwort_korrekt,
+                        pady=5,
+                        borderwidth=0,
+                        compound=CENTER,
+                        command=None
+                        )
 
     def load_question(self, question_number):
         if self.answered == True:
             self.active_button = 0
             self.answered = False
             self.data = json.loads(question_number)
-            self.set_main_button(self.grau)
+            self.set_main_button(self.rahmen)
             self.window = Toplevel(width=1920, height=1080, bg="white")
             self.window.state("zoomed")
             img = Image.open(self.data["pic"])
             img = ImageTk.PhotoImage(img)
             Label(self.window, image=img).grid(column=0, row=0)
+            print("Knopf A", self.answer_button_a)
             self.answer_button_a = Button(
                 self.window,
                 text=self.data["answer1"],
@@ -730,7 +707,9 @@ class Quiz:
                 borderwidth=0,
                 compound=CENTER,
                 command=self.pressed_button_a,
-            ).grid(column=0, row=1)
+            )
+            self.answer_button_a.grid(column=0, row=1)
+            print("Knopf B", self.answer_button_b)
             self.answer_button_b = Button(
                 self.window,
                 text=self.data["answer2"],
@@ -743,7 +722,9 @@ class Quiz:
                 borderwidth=0,
                 compound=CENTER,
                 command=self.pressed_button_b,
-            ).grid(column=0, row=2)
+            )
+            self.answer_button_b.grid(column=0, row=2)
+            print("Knopf C", self.answer_button_c)
             self.answer_button_c = Button(
                 self.window,
                 text=self.data["answer3"],
@@ -756,7 +737,8 @@ class Quiz:
                 borderwidth=0,
                 compound=CENTER,
                 command=self.pressed_button_c,
-            ).grid(column=0, row=3)
+            )
+            self.answer_button_c.grid(column=0, row=3)
             self.window.mainloop()
 
 
