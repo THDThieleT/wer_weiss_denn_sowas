@@ -1,6 +1,7 @@
 # Import the required Libraries
 from tkinter import *
 from tkVideoPlayer import TkinterVideo
+from pygame import mixer
 from PIL import Image, ImageTk
 import json
 
@@ -772,8 +773,11 @@ class Quiz:
     def play_answer(self):
         self.answer_window = Toplevel(width=1920, height=1080, bg="white")
         self.answer_window.state("zoomed")
-        videoplayer = TkinterVideo(master=self.answer_window, scaled=True)
+        videoplayer = TkinterVideo(master=self.answer_window, scaled=True) 
+        mixer.init() # initiate the mixer instance
+        mixer.music.load('nice.mp3') # loads the music, can be also mp3 file.
         videoplayer.load("nice.mp4")
+        mixer.music.play() # plays the music
         videoplayer.pack(expand=True, fill="both")
         videoplayer.play() # play the video
         videoplayer.bind("<<Ended>>", self.end_video)
