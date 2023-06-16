@@ -1,5 +1,6 @@
 # Import the required Libraries
 from tkinter import *
+from tkVideoPlayer import TkinterVideo
 from PIL import Image, ImageTk
 import json
 
@@ -199,7 +200,6 @@ class Quiz:
         index = self.data["index"]
         temp = json.loads(themen)
         if(index == 0):
-            print("reset")
             self.button1.configure(
             text=temp["thema1"],
             font=("Arial", 20, "bold"),
@@ -209,7 +209,6 @@ class Quiz:
             command=lambda:None
             )
             if color == self.grau:
-                print("Grau")
                 self.button1.configure(command=lambda: self.load_question(frage1))
             
         
@@ -466,6 +465,7 @@ class Quiz:
                         compound=CENTER,
                         command=lambda:None
                         )
+                self.play_answer()
         
     def pressed_button_b(self):
         if self.answered == False:
@@ -588,6 +588,7 @@ class Quiz:
                         compound=CENTER,
                         command=lambda:None
                         )
+                self.play_answer()
 
     def pressed_button_c(self):
         if self.answered == False:
@@ -709,6 +710,7 @@ class Quiz:
                         compound=CENTER,
                         command=lambda:None
                         )
+                self.play_answer()
 
     def load_question(self, question_number):
         self.active_button = 0
@@ -764,6 +766,20 @@ class Quiz:
         self.answer_button_c.grid(column=0, row=3)
         self.window.mainloop()
 
+    def end_video(self, event):
+        self.answer_window.destroy()
+
+    def play_answer(self):
+        self.answer_window = Toplevel(width=1920, height=1080, bg="white")
+        self.answer_window.state("zoomed")
+        videoplayer = TkinterVideo(master=self.answer_window, scaled=True)
+        videoplayer.load("nice.mp4")
+        videoplayer.pack(expand=True, fill="both")
+        videoplayer.play() # play the video
+        videoplayer.bind("<<Ended>>", self.end_video)
+        
+        
+        
 
 if __name__ == "__main__":
     quiz = Quiz()
