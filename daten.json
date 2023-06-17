@@ -1,0 +1,138 @@
+{
+    "themen": [
+        "Clever",
+        "Total Genial",
+        "Gesundheit",
+        "tierisch, tierisch",
+        "Trick 17",
+        "Auto",
+        "?",
+        "Im Grünen",
+        "Vereine",
+        "Heimat",
+        "Sport",
+        "Brisant!"
+    ],
+    "fragen": [
+        {
+            "pic": "Bilder/frage1.png",
+            "answer1": "Columbo",
+            "answer2": "Monk",
+            "answer3": "Johannes Staller",
+            "correct": 1,
+            "index": 0,
+            "video": "Videos/nice.mp4",
+            "audio": "Videos/nice.mp3"
+        },
+        {
+            "pic": "Bilder/frage2.png",
+            "answer1": "Leidenschaft unter dem See Tanz",
+            "answer2": "Verliebt unter dem See Tanz",
+            "answer3": "Verzauberung unter dem See Tanz",
+            "correct": 3,
+            "index": 1,
+            "video": "Videos/nice.mp4",
+            "audio": "Videos/nice.mp3"
+        },
+        {
+            "pic": "Bilder/frage3.png",
+            "answer1": "22 Oktober 1984 - 25. März 1988",
+            "answer2": "22 Oktober 1985 - 25. März 1989",
+            "answer3": "22 Oktober 1986 - 25. März 1990",
+            "correct": 2,
+            "index": 2,
+            "video": "Videos/nice.mp4",
+            "audio": "Videos/nice.mp3"
+        },
+        {
+            "pic": "Bilder/frage4.png",
+            "answer1": "Grün-Blau",
+            "answer2": "Grün-Gelb",
+            "answer3": "Orange-Gelb",
+            "correct": 3,
+            "index": 3,
+            "video": "Videos/nice.mp4",
+            "audio": "Videos/nice.mp3"
+        },
+        {
+            "pic": "Bilder/frage5.png",
+            "answer1": "Kaugummi",
+            "answer2": "Schokolade",
+            "answer3": "Kartoffel",
+            "correct": 2,
+            "index": 4,
+            "video": "Videos/nice.mp4",
+            "audio": "Videos/nice.mp3"
+        },
+        {
+            "pic": "Bilder/frage6.png",
+            "answer1": "K.I.T.T und der Delorean wurden von der selben Person designed",
+            "answer2": "Musik ist vom selben Komponisten",
+            "answer3": "Beides kam im selben Jahr heraus",
+            "correct": 1,
+            "index": 5,
+            "video": "Videos/nice.mp4",
+            "audio": "Videos/nice.mp3"
+        },
+        {
+            "pic": "Bilder/frage7.png",
+            "answer1": "Die Miami Cops (1985)",
+            "answer2": "Die Troublemaker (1994)",
+            "answer3": "Vier Fäuste gegen Rio",
+            "correct": 2,
+            "index": 6,
+            "video": "Videos/nice.mp4",
+            "audio": "Videos/nice.mp3"
+        },
+        {
+            "pic": "Bilder/frage8.png",
+            "answer1": "100 - 119",
+            "answer2": "Keine",
+            "answer3": "60-80",
+            "correct": 1,
+            "index": 7,
+            "video": "Videos/nice.mp4",
+            "audio": "Videos/nice.mp3"
+        },
+        {
+            "pic": "Bilder/frage9.png",
+            "answer1": "Noah Weißhaupt",
+            "answer2": "Matthias Ginter",
+            "answer3": "Ritsu Doan",
+            "correct": 3,
+            "index": 8,
+            "video": "Videos/nice.mp4",
+            "audio": "Videos/nice.mp3"
+        },
+        {
+            "pic": "Bilder/frage10.png",
+            "answer1": "Pfeil",
+            "answer2": "Edelweiß",
+            "answer3": "Libelle",
+            "correct": 1,
+            "index": 9,
+            "video": "Videos/nice.mp4",
+            "audio": "Videos/nice.mp3"
+        },
+        {
+            "pic": "Bilder/frage11.png",
+            "answer1": "1945er Ford Cabrio",
+            "answer2": "1947er Ford Cabrio",
+            "answer3": "1950er Ford Cabrio",
+            "correct": 2,
+            "index": 10,
+            "video": "Videos/nice.mp4",
+            "audio": "Videos/nice.mp3"
+        },
+        {
+            "pic": "Bilder/frage12.png",
+            "answer1": "540",
+            "answer2": "560",
+            "answer3": "580",
+            "correct": 1,
+            "index": 11,
+            "video": "Videos/nice.mp4",
+            "audio": "Videos/nice.mp3"
+        }
+    ]
+}
