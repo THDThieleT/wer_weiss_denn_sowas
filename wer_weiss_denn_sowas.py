@@ -781,9 +781,6 @@ class Quiz:
         videoplayer.pack(expand=True, fill="both")
         videoplayer.play() # play the video
         videoplayer.bind("<<Ended>>", self.end_video)
-        
-        
-        
-
+      
 if __name__ == "__main__":
     quiz = Quiz()
