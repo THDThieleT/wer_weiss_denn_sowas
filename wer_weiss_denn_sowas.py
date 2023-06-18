@@ -105,11 +105,13 @@ class Quiz:
                 if self.data["fragen"][self.question_index]["correct"] == 1:
                     temp = self.answer_buttons[0]
                     temp.configure(image= self.antwort_korrekt)
+                    self.set_main_button(self.korrekt)
                 else:
                     temp = self.answer_buttons[0]
                     temp.configure(image= self.antwort_falsch)
                     temp = self.answer_buttons[self.data["fragen"][self.question_index]["correct"] - 1]
                     temp.configure(image= self.antwort_korrekt)
+                    self.set_main_button(self.falsch)
                 
                 for i in range(0,3):
                     temp = self.answer_buttons[i]
@@ -129,12 +131,14 @@ class Quiz:
                 if self.data["fragen"][self.question_index]["correct"] == 2:
                     temp = self.answer_buttons[1]
                     temp.configure(image= self.antwort_korrekt)
+                    self.set_main_button(self.korrekt)
                 else:
                     temp = self.answer_buttons[1]
                     temp.configure(image= self.antwort_falsch)
                     temp = self.answer_buttons[self.data["fragen"][self.question_index]["correct"] - 1]
                     temp.configure(image= self.antwort_korrekt)
-                
+                    self.set_main_button(self.falsch)
+
                 for i in range(0,3):
                     temp = self.answer_buttons[i]
                     temp.configure(command=lambda:None)
@@ -153,11 +157,13 @@ class Quiz:
                 if self.data["fragen"][self.question_index]["correct"] == 3:
                     temp = self.answer_buttons[2]
                     temp.configure(image= self.antwort_korrekt)
+                    self.set_main_button(self.korrekt)
                 else:
                     temp = self.answer_buttons[2]
                     temp.configure(image= self.antwort_falsch)
                     temp = self.answer_buttons[self.data["fragen"][self.question_index]["correct"] - 1]
                     temp.configure(image= self.antwort_korrekt)
+                    self.set_main_button(self.falsch)
                 
                 for i in range(0,3):
                     temp = self.answer_buttons[i]
