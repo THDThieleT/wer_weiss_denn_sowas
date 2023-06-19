@@ -177,8 +177,15 @@ class Quiz:
         self.set_main_button(self.grau)
         self.window = Toplevel(width=1920, height=1080, bg="white")
         self.window.state("zoomed")
-        img = ImageTk.PhotoImage(Image.open(self.data["fragen"][question_number]["pic"]))
-        Label(self.window, borderwidth=0, image=img).grid(column=0, row=0)
+        img = Image.open(self.data["fragen"][question_number]["pic"])
+        img = img.resize((1920, 1080), Image.LINEAR)
+        img = img.crop((0, 250, 1920, 830))
+        img.crop()
+        img = ImageTk.PhotoImage(img)
+        temp_label = Label(self.window, borderwidth=0, image=img)
+        temp_label.grid(column=0, row=0)
+        temp_label = Label(self.window, text=self.data["fragen"][question_number]["frage"] , font=("Arial", 25, "bold"), pady=10, bg="white", borderwidth=0)
+        temp_label.grid(column=0, row=1)  
         button = Button(
                 self.window,
                 text=self.data["fragen"][question_number]["answer1"],
@@ -192,7 +199,7 @@ class Quiz:
                 compound=CENTER,
                 command=self.pressed_button_a,
             )
-        button.grid(column=0, row=1)
+        button.grid(column=0, row=2)
         self.answer_buttons[0] = button
         
         button = Button(
@@ -208,7 +215,7 @@ class Quiz:
                 compound=CENTER,
                 command=self.pressed_button_b,
             )
-        button.grid(column=0, row=2)
+        button.grid(column=0, row=3)
         self.answer_buttons[1] = button
         
         button = Button(
@@ -224,7 +231,7 @@ class Quiz:
                 compound=CENTER,
                 command=self.pressed_button_c,
             )
-        button.grid(column=0, row=3)
+        button.grid(column=0, row=4)
         self.answer_buttons[2] = button
         self.window.mainloop()
 
@@ -236,7 +243,7 @@ class Quiz:
         self.answer_window.state("zoomed")
         videoplayer = TkinterVideo(master=self.answer_window, scaled=True) 
         mixer.init() # initiate the mixer instance
-        mixer.music.load(self.data["fragen"][self.question_index]["audio"]) # loads the music, can be also mp3 file.
+        mixer.music.load(self.data["fragen"][self.question_index]["audio"])
         videoplayer.load(self.data["fragen"][self.question_index]["video"])
         mixer.music.play() # plays the music
         videoplayer.pack(expand=True, fill="both")

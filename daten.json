@@ -16,6 +16,7 @@
     "fragen": [
         {
             "pic": "Bilder/frage1.png",
+            "frage": "Von wem ist das Zitat: \"Wissen sie, bevor ich Kaffee getrunken\n habe, bin ich zwar da, aber ich bin nicht wirklich da\"",
             "answer1": "Columbo",
             "answer2": "Monk",
             "answer3": "Johannes Staller",
@@ -26,6 +27,7 @@
         },
         {
             "pic": "Bilder/frage2.png",
+            "frage": "Wie war der Name des Abschlussballs aus \"Zurück in die Zukunft\"",
             "answer1": "Leidenschaft unter dem See Tanz",
             "answer2": "Verliebt unter dem See Tanz",
             "answer3": "Verzauberung unter dem See Tanz",
@@ -36,6 +38,7 @@
         },
         {
             "pic": "Bilder/frage3.png",
+            "frage": "Von wann bis wann war die Serie \"Schwarzwaldklinik\"\nim deutschen Fernsehen zu sehen?",
             "answer1": "22 Oktober 1984 - 25. März 1988",
             "answer2": "22 Oktober 1985 - 25. März 1989",
             "answer3": "22 Oktober 1986 - 25. März 1990",
@@ -46,6 +49,7 @@
         },
         {
             "pic": "Bilder/frage4.png",
+            "frage": "Welche Farbe hat der Vogel Hansi aus dem Film \"Das weiße Rössl\"?",
             "answer1": "Grün-Blau",
             "answer2": "Grün-Gelb",
             "answer3": "Orange-Weiß",
@@ -56,8 +60,9 @@
         },
         {
             "pic": "Bilder/frage5.png",
+            "frage": "Womit verschließt MacGyver einen Schwefelsäuretank?",
             "answer1": "Kaugummi",
-            "answer2": "Schokolade",
+            "answer2": "Tafel Schokolade",
             "answer3": "Kartoffel",
             "correct": 2,
             "index": 4,
@@ -66,6 +71,7 @@
         },
         {
             "pic": "Bilder/frage6.png",
+            "frage": "Welche Gemeinsamkeit hat \"Zurück in die Zukunft\" und \"Knight Rider\"?",
             "answer1": "K.I.T.T und der Delorean wurden von der selben Person designed",
             "answer2": "Musik ist vom selben Komponisten",
             "answer3": "Beides kam im selben Jahr heraus",
@@ -76,8 +82,9 @@
         },
         {
             "pic": "Bilder/frage7.png",
-            "answer1": "Die Miami Cops (1985)",
-            "answer2": "Die Troublemaker (1994)",
+            "frage": "Was war der letzte gemeinsame Film von Bud Spencer und Terence Hill?",
+            "answer1": "Die Miami Cops",
+            "answer2": "Die Troublemaker",
             "answer3": "Vier Fäuste gegen Rio",
             "correct": 2,
             "index": 6,
@@ -86,6 +93,7 @@
         },
         {
             "pic": "Bilder/frage8.png",
+            "frage": "Wie viele Wirbel hat ein europäischer Aal?",
             "answer1": "100 - 119",
             "answer2": "Keine",
             "answer3": "60-80",
@@ -96,6 +104,7 @@
         },
         {
             "pic": "Bilder/frage9.png",
+            "frage": "In der Saison 2022/23 steht Lucas Höler auf Platz der der Torjäger Tabelle des \nSC Freiburg. Mit wem teilt er sich diesen Platz?",
             "answer1": "Noah Weißhaupt",
             "answer2": "Matthias Ginter",
             "answer3": "Ritsu Doan",
@@ -106,6 +115,7 @@
         },
         {
             "pic": "Bilder/frage10.png",
+            "frage": "Was für eine Haarspange trägt Sissi bei ihrer Verlobung mit Franz?",
             "answer1": "Pfeil",
             "answer2": "Edelweiß",
             "answer3": "Libelle",
@@ -116,6 +126,7 @@
         },
         {
             "pic": "Bilder/frage11.png",
+            "frage": "Welches Automodell verschenkt Mr Miyagi?",
             "answer1": "1945er Ford Cabrio",
             "answer2": "1947er Ford Cabrio",
             "answer3": "1950er Ford Cabrio",
@@ -126,9 +137,10 @@
         },
         {
             "pic": "Bilder/frage12.png",
-            "answer1": "540",
-            "answer2": "560",
-            "answer3": "580",
+            "frage": "Wie weit kann Löschwasser pro Teilstrecke einer Wasserförderung mit 800 L/min und 8 Bar Ausgangsdruck \n in der Ebene gefördert werden (Nächstes Verstärkungsgerät TS 8/8 - Eingangsdruck 1,5 Bar)",
+            "answer1": "540 Meter",
+            "answer2": "560 Meter",
+            "answer3": "580 Meter",
             "correct": 1,
             "index": 11,
             "video": "Videos/nice.mp4",
