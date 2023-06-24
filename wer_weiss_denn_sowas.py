@@ -23,9 +23,9 @@ class Quiz:
         self.active_button = -1
         self.question_index = -1
         self.answered = True
+        self.correct = False
         file = open("daten.json", encoding="UTF-8")
         self.data = json.load(file)
-        
         
         self.window = Toplevel
         self.answer_window = Toplevel
@@ -106,12 +106,14 @@ class Quiz:
                     temp = self.answer_buttons[0]
                     temp.configure(image= self.antwort_korrekt)
                     self.set_main_button(self.korrekt)
+                    self.correct = True
                 else:
                     temp = self.answer_buttons[0]
                     temp.configure(image= self.antwort_falsch)
                     temp = self.answer_buttons[self.data["fragen"][self.question_index]["correct"] - 1]
                     temp.configure(image= self.antwort_korrekt)
                     self.set_main_button(self.falsch)
+                    self.correct = False
                 
                 for i in range(0,3):
                     temp = self.answer_buttons[i]
@@ -132,12 +134,14 @@ class Quiz:
                     temp = self.answer_buttons[1]
                     temp.configure(image= self.antwort_korrekt)
                     self.set_main_button(self.korrekt)
+                    self.correct = True
                 else:
                     temp = self.answer_buttons[1]
                     temp.configure(image= self.antwort_falsch)
                     temp = self.answer_buttons[self.data["fragen"][self.question_index]["correct"] - 1]
                     temp.configure(image= self.antwort_korrekt)
                     self.set_main_button(self.falsch)
+                    self.correct = False
 
                 for i in range(0,3):
                     temp = self.answer_buttons[i]
@@ -158,12 +162,14 @@ class Quiz:
                     temp = self.answer_buttons[2]
                     temp.configure(image= self.antwort_korrekt)
                     self.set_main_button(self.korrekt)
+                    self.correct = True
                 else:
                     temp = self.answer_buttons[2]
                     temp.configure(image= self.antwort_falsch)
                     temp = self.answer_buttons[self.data["fragen"][self.question_index]["correct"] - 1]
                     temp.configure(image= self.antwort_korrekt)
                     self.set_main_button(self.falsch)
+                    self.correct = False
                 
                 for i in range(0,3):
                     temp = self.answer_buttons[i]
@@ -234,18 +240,24 @@ class Quiz:
         self.window.mainloop()
 
     def end_video(self, event):
+        #mixer.init()
+        if(self.correct):
+            mixer.music.load("Videos/richtig.mp3")
+        else:
+            mixer.music.load("Videos/wrong.mp3")
+        mixer.music.play()
         self.answer_window.destroy()
 
     def play_answer(self):
+        mixer.init()
         self.answer_window = Toplevel(width=1920, height=1080, bg="white")
         self.answer_window.state("zoomed")
         videoplayer = TkinterVideo(master=self.answer_window, scaled=True) 
-        mixer.init() # initiate the mixer instance
-        mixer.music.load(self.data["fragen"][self.question_index]["audio"])
         videoplayer.load(self.data["fragen"][self.question_index]["video"])
-        mixer.music.play() # plays the music
         videoplayer.pack(expand=True, fill="both")
+        mixer.music.load(self.data["fragen"][self.question_index]["audio"])
         videoplayer.play() # play the video
+        mixer.music.play()
         videoplayer.bind("<<Ended>>", self.end_video)
 
     def on_closing(self):
