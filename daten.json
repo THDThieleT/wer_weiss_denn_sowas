@@ -3,9 +3,9 @@
         "Clever",
         "Total Genial",
         "Gesundheit",
-        "tierisch, tierisch",
+        "Musik",
         "Trick 17",
-        "Auto",
+        "Wissen",
         "?",
         "Im Grünen",
         "Vereine",
@@ -22,8 +22,8 @@
             "answer3": "Johannes Staller",
             "correct": 1,
             "index": 0,
-            "video": "Videos/nice.mp4",
-            "audio": "Videos/nice.mp3"
+            "video": "Videos/frage1.mp4",
+            "audio": "Videos/frage1.mp3"
         },
         {
             "pic": "Bilder/frage2.png",
@@ -33,30 +33,30 @@
             "answer3": "Verzauberung unter dem See Tanz",
             "correct": 3,
             "index": 1,
-            "video": "Videos/nice.mp4",
-            "audio": "Videos/nice.mp3"
+            "video": "Videos/frage2.mp4",
+            "audio": "Videos/frage2.mp3"
         },
         {
             "pic": "Bilder/frage3.png",
             "frage": "Welchen Namen haben die Medikamente, welche Oberschwester Hildegard aus der Serie \"Schwarzwaldklinik\"verwechselt?",
             "answer1": "Dolormin und Korodin",
-            "answer2": "Dolocain und Kododantin",
+            "answer2": "Dolocain und Korodantin",
             "answer3": "Dulcamara und Kreosotum",
             "correct": 2,
             "index": 2,
-            "video": "Videos/nice.mp4",
-            "audio": "Videos/nice.mp3"
+            "video": "Videos/frage3.mp4",
+            "audio": "Videos/frage3.mp3"
         },
         {
             "pic": "Bilder/frage4.png",
-            "frage": "Welche Farbe hat der Vogel Hansi aus dem Film \"Das weiße Rössl\"?",
-            "answer1": "Grün-Blau",
-            "answer2": "Grün-Gelb",
-            "answer3": "Orange-Weiß",
+            "frage": "Welche Farbe hat der Hubschrauber mit dem Sigismund Sülzheimer angeflogen kommt?",
+            "answer1": "Gelb-Weiß-Schwarz",
+            "answer2": "Weiß-Blau-Gelb",
+            "answer3": "Rot-Weiß-Gelb",
             "correct": 3,
             "index": 3,
-            "video": "Videos/nice.mp4",
-            "audio": "Videos/nice.mp3"
+            "video": "Videos/frage4.mp4",
+            "audio": "Videos/frage4.mp3"
         },
         {
             "pic": "Bilder/frage5.png",
@@ -66,8 +66,8 @@
             "answer3": "Kartoffel",
             "correct": 2,
             "index": 4,
-            "video": "Videos/nice.mp4",
-            "audio": "Videos/nice.mp3"
+            "video": "Videos/frage5.mp4",
+            "audio": "Videos/frage5.mp3"
         },
         {
             "pic": "Bilder/frage6.png",
@@ -77,8 +77,8 @@
             "answer3": "Beides kam im selben Jahr heraus",
             "correct": 1,
             "index": 5,
-            "video": "Videos/nice.mp4",
-            "audio": "Videos/nice.mp3"
+            "video": "Videos/frage6.mp4",
+            "audio": "Videos/frage6.mp3"
         },
         {
             "pic": "Bilder/frage7.png",
@@ -88,8 +88,8 @@
             "answer3": "Vier Fäuste gegen Rio",
             "correct": 2,
             "index": 6,
-            "video": "Videos/nice.mp4",
-            "audio": "Videos/nice.mp3"
+            "video": "Videos/frage7.mp4",
+            "audio": "Videos/frage7.mp3"
         },
         {
             "pic": "Bilder/frage8.png",
@@ -104,14 +104,14 @@
         },
         {
             "pic": "Bilder/frage9.png",
-            "frage": "In der Saison 2022/23 steht Lucas Höler auf Platz der der Torjäger Tabelle des \nSC Freiburg. Mit wem teilt er sich diesen Platz?",
+            "frage": "In der Saison 2022/23 steht Lucas Höler auf Platz drei der Torjäger Tabelle des SC Freiburg.\nMit wem teilt er sich diesen Platz?",
             "answer1": "Noah Weißhaupt",
             "answer2": "Matthias Ginter",
             "answer3": "Ritsu Doan",
             "correct": 3,
             "index": 8,
-            "video": "Videos/nice.mp4",
-            "audio": "Videos/nice.mp3"
+            "video": "Videos/frage9.mp4",
+            "audio": "Videos/frage9.mp3"
         },
         {
             "pic": "Bilder/frage10.png",
@@ -121,8 +121,8 @@
             "answer3": "Libelle",
             "correct": 1,
             "index": 9,
-            "video": "Videos/nice.mp4",
-            "audio": "Videos/nice.mp3"
+            "video": "Videos/frage10.mp4",
+            "audio": "Videos/frage10.mp3"
         },
         {
             "pic": "Bilder/frage11.png",
@@ -132,8 +132,8 @@
             "answer3": "1950er Ford Cabrio",
             "correct": 2,
             "index": 10,
-            "video": "Videos/nice.mp4",
-            "audio": "Videos/nice.mp3"
+            "video": "Videos/frage11.mp4",
+            "audio": "Videos/frage11.mp3"
         },
         {
             "pic": "Bilder/frage12.png",
@@ -143,8 +143,8 @@
             "answer3": "580 Meter",
             "correct": 1,
             "index": 11,
-            "video": "Videos/nice.mp4",
-            "audio": "Videos/nice.mp3"
+            "video": "Videos/frage12.mp4",
+            "audio": "Videos/frage12.mp3"
         }
     ]
 }
